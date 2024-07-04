@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:refresh/screen/order_screen.dart';
 import '../widgets/cart.dart';
 
 class CheckoutScreen extends StatelessWidget {
@@ -60,7 +61,7 @@ class CheckoutScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: cart.items.isEmpty ? null : () {
-
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const OrderScreen()));
               },
               child: const Text('Place Order'),
             ),
